@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Projektselektor" Height="950" Width="600">
+    <StackPanel Margin="10" Background="WhiteSmoke">
+        <TextBlock>
+            <Bold>
+                <Label Content="Kunde:" Margin="5"/>
+            </Bold>
+        </TextBlock>
+        <RadioButton x:Name="rb_Herr" GroupName="Geschlecht">Herr</RadioButton>
+        <RadioButton x:Name="rb_Frau" GroupName="Geschlecht">Frau</RadioButton>
+
+        <TextBlock>
+            <Bold>
+                <Label Content="Nachname:" Margin="5"/>
+            </Bold>
+        </TextBlock>
+        <TextBox x:Name="txtBox_nachname" HorizontalAlignment="Left" Margin="5" TextWrapping="Wrap" Width="120"/>
+        
+        <TextBlock>
+            <Bold>
+                <Label Content="Maßnahme:" Margin="5"/>
+            </Bold>
+        </TextBlock>
+        <RadioButton x:Name="rb_FZ">Projekt 00</RadioButton>
+        <RadioButton x:Name="rb_AC">Projekt 01</RadioButton>
+        <RadioButton x:Name="rb_F">Projekt 02</RadioButton>
+        <RadioButton x:Name="rb_OA">Projekt 03</RadioButton>
+        <RadioButton x:Name="rb_JSD">Projekt 04</RadioButton>
+        <RadioButton x:Name="rb_TZ">Projekt 05</RadioButton>
+
+        <TextBlock>
+            <Bold>
+                <Label Content="Zeitraum" Margin="5"/>
+            </Bold>
+        </TextBlock>
+        <DatePicker x:Name="dp_Beginn" HorizontalAlignment="Left" Margin="5" Width="150"></DatePicker>
+        <DatePicker x:Name="dp_Ende" HorizontalAlignment="Left" Margin="5" Width="150"></DatePicker>
+
+        <TextBlock>
+            <Bold>
+                <Label Content="Prognose:" Margin="5"/>
+            </Bold>
+        </TextBlock>
+        <RadioButton x:Name="rb_Pro12">Integration binnen 12 Monaten möglich</RadioButton>
+        <RadioButton x:Name="rb_Pro24">Integration binnen 24 Monaten möglich</RadioButton>
+        
+        <Button Margin="20" Click="Button_Click_1" Content="Daten übernehmen" Width="150"/>
+        <TextBox x:Name="txtBox_Ausgabe" Text="" TextWrapping="Wrap" Width="500" RenderTransformOrigin="0.517,7.993"/>
+
+
+    </StackPanel>
+
+</Window>
